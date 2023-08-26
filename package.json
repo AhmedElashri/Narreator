@@ -1,0 +1,15 @@
+{
+  "name": "narreator",
+  "productName": "Narreator",
+  "version": "1.0.0",
+  "description": "Full Story Suite",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Good Juju",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^22.2.0"
+  }
+}

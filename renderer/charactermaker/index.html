@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+  <link href="./css/style.css" rel="stylesheet">
+  <title>Narreator</title>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="flex">
+			<div class="dropdown" data-dropdown data-story>
+				<button class="dropbtn id-story-btn" data-story-dropbutton>Select A Story</button>
+				<div class="drop-menu" data-story-dropmenu>
+				</div>
+			</div>
+			  
+			<div class="dropdown" data-dropdown data-char>
+				<button class="dropbtn" data-char-dropbutton>Select a Story First</button>
+				<div class="drop-menu" data-char-dropmenu>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex">
+			<div class="lsm">
+				<input type="text" class="textbox" placeholder="New Story" name="newStory" data-cs/>
+				<button class="btn" type="button" data-cs-btn>Create</button>
+			</div>
+			<div class="lsm">
+				<input type="text" class="textbox" placeholder="New Character" name="newChar" data-cc/>
+				<button class="btn" type="button" data-cc-btn>Create</button>
+			</div>
+      	</div>
+    </nav>
+    <div class="main-container">
+		<div class="left-container">
+			<div class="left-top-container" data-basic-info></div>
+			<div class="left-bot-container" data-fight-style></div>
+		</div>
+		<div class="right-container" data-descriptive-info></div>
+	</div>
+    <script src="./js/index.js" defer></script>
+</body>
+</html>
