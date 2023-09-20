@@ -47,9 +47,8 @@ async function updateCharacterDropdown() {
   console.log(characters)
   characterDropdownMenu.innerHTML = ""
   characters.forEach(char => {
-    characterDropdownMenu.innerHTML += `<div class="drop-item" data-char-dropitem>${char}</div>`
+    characterDropdownMenu.innerHTML += `<div class="drop-item" data-char-dropitem>${char.slice(0,char.length-5)}</div>`
   })
-  
 }
 
 //- Event Listeners
@@ -82,3 +81,5 @@ createStoryButton.addEventListener('click', () => {
   selectedStory = createStoryTextbox.value
   createStoryTextbox.value = ""
 })
+
+
