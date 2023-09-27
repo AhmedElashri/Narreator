@@ -51,7 +51,16 @@ async function updateCharacterDropdown() {
   })
 }
 
-//- Event Listeners
+// Create Story
+createStoryButton.addEventListener('click', () => {
+  if (createStoryTextbox.value == "") return
+  window.api.newStory(createStoryTextbox.value)
+  storyDropdownButton.innerHTML = createStoryTextbox.value
+  selectedStory = createStoryTextbox.value
+  createStoryTextbox.value = ""
+})
+
+//- Visual JS
 // Open Dropdown 
 document.addEventListener('click', (event) => {
   const isDropdownButton = event.target.matches("[data-story-dropbutton]") || event.target.matches("[data-char-dropbutton]")
@@ -73,13 +82,19 @@ document.addEventListener('click', (event) => {
   })
 })
 
-// Create Story
-createStoryButton.addEventListener('click', () => {
-  if (createStoryTextbox.value == "") return
-  window.api.newStory(createStoryTextbox.value)
-  storyDropdownButton.innerHTML = createStoryTextbox.value
-  selectedStory = createStoryTextbox.value
-  createStoryTextbox.value = ""
+const resizebar = document.querySelector(".resizer")
+const left = document.querySelector(".left-container")
+const right = document.querySelector(".right-container")
+const container = document.querySelector(".main-container")
+
+resizebar.addEventListener('mousedown', (e) => {
+  window.addEventListener('mousemove', resize)
+  window.addEventListener('mouseup', () => {
+    window.removeEventListener('mousemove', resize)
+  })
 })
 
+function resize(e) {
+  left.style.width = e.pageX - left.getBoundingClientRect().left - 6 + 'px'
+}
 

@@ -11,34 +11,54 @@
     <nav class="navbar">
 		<div class="flex">
 			<div class="dropdown" data-dropdown data-story>
-				<button class="dropbtn id-story-btn" data-story-dropbutton>Select A Story</button>
-				<div class="drop-menu" data-story-dropmenu>
+				<button class="dropbtn text" data-story-dropbutton>Select A Story</button>
+				<div class="drop-menu text" data-story-dropmenu>
 				</div>
 			</div>
 			  
 			<div class="dropdown" data-dropdown data-char>
-				<button class="dropbtn" data-char-dropbutton>Select a Story First</button>
-				<div class="drop-menu" data-char-dropmenu>
+				<button class="dropbtn text" data-char-dropbutton>Select a Story First</button>
+				<div class="drop-menu text" data-char-dropmenu>
 				</div>
 			</div>
 		</div>
 
 		<div class="flex">
 			<div class="lsm">
-				<input type="text" class="textbox" placeholder="New Story" name="newStory" data-cs/>
-				<button class="btn" type="button" data-cs-btn>Create</button>
+				<input type="text" class="textbox text" placeholder="New Story" name="newStory" data-cs/>
+				<button class="btn text" type="button" data-cs-btn>Create</button>
 			</div>
 			<div class="lsm">
-				<input type="text" class="textbox" placeholder="New Character" name="newChar" data-cc/>
-				<button class="btn" type="button" data-cc-btn>Create</button>
+				<input type="text" class="textbox text" placeholder="New Character" name="newChar" data-cc/>
+				<button class="btn text" type="button" data-cc-btn>Create</button>
 			</div>
       	</div>
     </nav>
     <div class="main-container">
 		<div class="left-container">
-			<div class="left-top-container" data-basic-info><img id="imgplace" src=""></div>
-			<div class="left-bot-container" data-fight-style></div>
+			<div class="left-top-container" data-basic-info>
+				<div class="character-info">
+					<img class="character-icon" src="assets/plus.png">
+					<div class="test">
+						<H2>Name</H2>
+						<p>AGE - - - SEX</p>
+						<p>Nationality</p>
+					</div>
+				</div>
+				<div class="">
+					<H2>Combat Style</H2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet malesuada enim. Sed maximus iaculis suscipit.</p>
+				</div>
+				<div class="">
+					<H2>Lore Summary</H2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga veniam nesciunt sit quaerat doloribus temporibus, maxime sapiente dolore exercitationem inventore officiis alias ipsum et ea corrupti corporis aliquam nihil accusamus?</p>
+				</div>
+			</div>
+			<div class="left-bot-container" data-fight-style>
+
+			</div>
 		</div>
+		<div class="resizer"></div>
 		<div class="right-container" data-descriptive-info></div>
 	</div>
     <script type="module" src="./js/index.js" defer></script>
